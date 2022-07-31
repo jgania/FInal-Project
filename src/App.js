@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import NavbarComp from "./components/NavbarComp";
 
 function App() {
   const [data, setData] = useState({})
@@ -19,6 +21,7 @@ function App() {
 
   return (
     <div className="app">
+      <NavbarComp/>
       <div className="search">
         <input
           value={location}
@@ -56,9 +59,6 @@ function App() {
             </div>
           </div>
         }
-
-
-
       </div>
     </div>
   );
