@@ -22,7 +22,7 @@ h1 {
   font-size: 6rem;
 }
 
-.app {
+.home {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -30,7 +30,7 @@ h1 {
   color: #fff;
 }
 
-.app:before {
+.home:before {
   content: '';
   background: url(https://i.pinimg.com/originals/07/f2/b3/07f2b330602d985f739f144a61f999f6.jpg) no-repeat center center/cover;
   position: absolute;
@@ -41,12 +41,12 @@ h1 {
   z-index: -1;
 }
 
-.app .search {
+.home .search {
   text-align: center;
   padding: 1rem;
 }
 
-.app input {
+.home input {
   padding: .7rem 1.5rem;
   font-size: 1.2rem;
   border-radius: 25px;
@@ -71,19 +71,19 @@ h1 {
   justify-content: space-between;
 }
 
-.app .top {
+.home .top {
   width: 100%;
   margin: 1rem auto;
 }
 
-.app .description {
+.home .description {
   position: relative;
   right: -90%;
   transform-origin: 0 0;
   transform: rotate(269deg);
 }
 
-.app .bottom {
+.home .bottom {
   display: flex;
   justify-content: space-evenly;
   text-align: center;
@@ -111,7 +111,7 @@ h1 {
 
 .ContactUs:before {
   content: '';
-  background: url(https://cdn.wallpapersafari.com/29/14/kFcxyz.jpgautiful-scenery-landscape.jpg) no-repeat center center/cover;
+  background: url(https://wallpapersmug.com/download/1366x768/a7ae89/clouds-beautiful-scenery-landscape.jpg) no-repeat center center/cover;
   position: absolute;
   width: 100%;
   height: 100%;
