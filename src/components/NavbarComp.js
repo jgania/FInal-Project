@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link, useMatch, useResolvedPath } from "react-router-dom"
 
 export default class NavbarComp extends Component {
     render() {
@@ -11,16 +12,9 @@ export default class NavbarComp extends Component {
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/App">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/About">About</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/ContactUs">Contact Us</a>
-                            </li>
-                       
+                            <CustomLink to="/">Home</CustomLink>
+                            <CustomLink to="/pricing">Pricing</CustomLink>
+                            <CustomLink to="/about">About</CustomLink>
                         </ul>
                     </div>
                 </div>
@@ -28,3 +22,16 @@ export default class NavbarComp extends Component {
         )
     }
 }
+
+function CustomLink({ to, children, ...props }) {
+    const resolvedPath = useResolvedPath(to)
+    const isActive = useMatch({ path: resolvedPath.pathname, end: true })
+  
+    return (
+      <li className={isActive ? "active" : ""}>
+        <Link to={to} {...props}>
+          {children}
+        </Link>
+      </li>
+    )
+  }
