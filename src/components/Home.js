@@ -1,7 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarComp from "./NavbarComp";
+
 
 function Home() {
     const [data, setData] = useState({})
@@ -21,9 +21,8 @@ function Home() {
   
     return (
       <div className="home">
-        <NavbarComp/>
         <div className="search">
-            <input
+            <input className="input"
               value={location}
               onChange={event => setLocation(event.target.value)}
               onKeyPress={searchLocation}
